@@ -1,0 +1,160 @@
+<!--index.html
+@author: Zac Mason
+Last modified: 5/8/20
+This page requires a user to sign in before entering
+the site
+Adapted from code provided by Dr. Sigman
+Modal code retrieved from
+https://bootsnipp.com/snippets/qr46N-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Image Host</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous">
+    </script>
+    
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div id="main">
+    <div class="container">
+        <div style="text-align:center">
+
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+
+            <h2>Create Account</h2>
+            <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#sem-reg">
+                Sign Up
+            </button>
+
+            <br/>
+            <br/>
+
+            <h2>Login</h2>
+            <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#sem-login">
+                Sign In
+            </button>
+            
+            <br/>
+            <br/>
+
+            <div id="hideHome" style="display: none">
+                <h2>Home</h2>
+                <button id="homeBtnIn" type="button" class="btn btn-outline-secondary">
+                    Photos
+                </button>
+            </div>
+        </div>
+
+        <!-- Create Account Modal -->
+        <div class="modal fade seminor-login-modal" data-backdrop="static" id="sem-reg">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+
+                    <!-- Modal body -->
+                    <div class="modal-body seminor-login-modal-body">
+                        <h5 class="modal-title text-center">CREATE AN ACCOUNT</h5>
+                        <button type="button" class="close" data-dismiss="modal">
+                        <span><i class="fa fa-times-circle" aria-hidden="true"></i></span>
+                        </button>
+
+                        <form class="seminor-login-form" action = "api/user" method = "post">
+                            <div class="form-group">
+                                <input type="name" class="form-control" required autocomplete="off" name="full_nameCreate" id="full_nameCreate">
+                                <label class="form-control-placeholder" for="full_nameCreate">Full Name</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" required autocomplete="off" name="uidCreate" id="uidCreate">
+                                <label class="form-control-placeholder" for="uidCreate">Username</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" required autocomplete="off" name="passwordCreate" id="passwordCreate">
+                                <label class="form-control-placeholder" for="passwordCreate">Password</label>
+                            </div>
+                            <div class="btn-check-log">
+                                <button type="submit" class="btn-check-login">SIGN UP</button>
+                            </div>
+                            <div class="create-new-fau text-center pt-3">
+                                <a href="#" class="text-primary-fau"><span data-toggle="modal" data-target="#sem-login" data-dismiss="modal">Already Have An Account</span></a>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- Login Modal -->
+        <div class="modal fade seminor-login-modal" data-backdrop="static" id="sem-login">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+
+                    <!-- Modal body -->
+                    <div class="modal-body seminor-login-modal-body">
+                        <h5 class="modal-title text-center">LOGIN TO MY ACCOUNT</h5>
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span><i class="fa fa-times-circle" aria-hidden="true"></i></span>
+                        </button>
+
+                        <form class="seminor-login-form" id="loginForm">
+                            <div class="form-group">
+                                <input type="email" class="form-control" required autocomplete="off" name="uid" id="uid">
+                                <label class="form-control-placeholder" for="uid">Username</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" required autocomplete="off" name="password" id="password">
+                                <label class="form-control-placeholder" for="password">Password</label>
+                            </div>
+                            <div class="btn-check-log">
+                                <button type="button" id="loginButton" class="btn-check-login">LOGIN</button>
+                            </div>
+                            <div class="create-new-fau text-center pt-3">
+                                <a href="#" class="text-primary-fau"><span data-toggle="modal" data-target="#sem-reg" data-dismiss="modal">Create A New Account</span></a>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+    
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+          integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<script src="../login.js"></script>
+<script src="../photo.js"></script>
+<script src="../upload.js"></script>
+<script src="../exhibit.js"></script>
+<script src="../createex.js"></script>
+<script src="../userex.js"></script>
+<script src="../artist.js"></script>
+<script src="../exupload.js"></script>
+<link rel="stylesheet" href="../login.css">
+<style>
+    body {
+        background: aliceblue;
+    }
+</style>
+</body>
+</html>

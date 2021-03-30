@@ -1,0 +1,27 @@
+<!--upload.html
+@author: Zac Mason
+Last modified: 4/5/20
+This page allows users to upload images
+The HTML fragment is placed in index.html
+Adapted from code provided by Dr. Sigman
+-->
+
+<div class="container">
+    <div class="card border mt-5">
+        <h1 class="card-header">Upload Image</h1>
+        <div align="left">
+            <input id="homeBtnExUp" class="btn mt-4 ml-4 mb-1" type="submit" value="Home">
+            <input id="exHomeBtnExUp" class="btn mt-4 ml-2 mb-1" type="submit" value="Exhibit Home">
+            <input id="logoutBtnExUp" class="btn mt-4 ml-2 mb-1" type="submit" value="Logout">
+        </div>
+        <div class="card-body">
+            <div class="form-group">
+                <form id="exImageForm">
+                    <label for="imgname">Photo Name: </label>
+                    <input class="form-control" type="text" name="imgname" id="imgname">
+                    <input class="btn mt-3" type="button" value="Add" id="addImgBtn">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
